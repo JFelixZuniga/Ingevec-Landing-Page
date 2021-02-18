@@ -6,6 +6,10 @@ main {
     margin-top: 15rem;
     margin-left: 10rem;
     position: relative;
+    @include telefono {
+      font-size: 2.5rem;
+      margin-left: 6rem;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -14,6 +18,11 @@ main {
       background-color: $azul;
       top: 2rem;
       left: -10rem;
+      @include telefono {
+        width: 4rem;
+        top: 1.2rem;
+        left: -5rem;
+      }
     }
   }
   .text-start {
@@ -21,28 +30,42 @@ main {
     p {
       margin-top: 4rem;
       font-size: 1.8rem;
+      line-height: 1.8;
+      @include telefono {
+        font-size: 1.5rem;
+        padding: 0 2.5rem;
+      }
     }
   }
   .text-mid {
-    padding: 3rem 10rem;
+    padding: 3rem 5rem 3rem 10rem;
+    @include telefono {
+      padding: 2rem 1rem 2rem 5rem;
+    }
     p {
       color: $azul;
       font-size: 1.8rem;
       position: relative;
 
+      @include telefono {
+        font-size: 1.5rem;
+      }
+
       &::before {
-        // display: inline-block;
         position: absolute;
         content: "";
-        width: 2rem;
-        height: 2rem;
-        left: -3rem;
-        background: url(../img/rigth-arrow.svg) center/cover no-repeat;
+        width: 2.5rem;
+        height: 2.5rem;
+        left: -3.5rem;
+        top: -0.5rem;
+        background: url(../img/rigth-arrow.svg) center center no-repeat;
         // vertical-align: text-bottom;
       }
     }
   }
   .text-end {
     padding-bottom: 3rem;
+    line-height: 1.8;
+    padding: 0 2.5rem;
   }
 }

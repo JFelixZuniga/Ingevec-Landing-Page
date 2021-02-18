@@ -1,10 +1,11 @@
 header {
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: $gris-light;
+  background-color: $blanco;
+  box-shadow: 0 -1rem 5px 10px black;
 
   .main-nav {
     height: 10rem;
@@ -22,31 +23,33 @@ header {
       //   display: inherit;
       // }
     }
-    @include tablet {
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+
       .logo {
-        position: absolute;
-        right: 0;
+        position: static;
+      }
+
+      .nav {
+        display: none;
       }
     }
   }
 
   .nav {
     text-transform: uppercase;
-    color: red;
 
+    a {
+      color: $azul;
+
+      &:first-child {
+        margin-right: 5rem;
+      }
+    }
     .project {
       font-weight: $bold;
-      color: $azul;
-    }
-
-    a:first-child {
-      margin-right: 5rem;
-    }
-  }
-
-  @include tablet {
-    .nav {
-      display: none;
     }
   }
 }
@@ -67,6 +70,10 @@ header {
   &:hover {
     box-shadow: inset 0.5rem 0.5rem 1rem #cacaca,
       inset -0.5rem -0.5rem 1rem $blanco;
+
+    @include tablet {
+      box-shadow: none;
+    }
   }
 
   .bar {
@@ -119,12 +126,12 @@ header {
   transform: translateX(-55rem);
   margin: 0;
   padding: 0;
-  background-color: #eee;
+  background-color: $gris-light;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  box-shadow: -0.5rem 0 1rem rgba(0, 0, 0, 0.1);
+  justify-content: space-evenly;
+  box-shadow: 0.5rem 0 1rem rgba(0, 0, 0, 0.5);
   z-index: 1500;
   transition: transform 0.5s;
 
@@ -153,35 +160,3 @@ header {
     color: $celeste;
   }
 }
-
-// @media screen and (max-width: 1400px) {
-//   .hero-clipped {
-//     width: 100%;
-//     height: 75vh;
-//     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
-//   }
-//   .logo a {
-//     color: #333;
-//     outline-color: #333;
-//   }
-// }
-// @media screen and (max-width: 760px) {
-//   .nav-list {
-//     width: 30rem;
-//   }
-//   .main-heading {
-//     font-size: 4rem;
-//   }
-//   .sub-heading {
-//     font-size: 1.2rem;
-//   }
-//   .cta-btn {
-//     padding: 1rem 2.5rem;
-//     margin-top: 2rem;
-//   }
-// }
-// @media screen and (max-width: 550px) {
-//   .main-heading {
-//     font-size: 3rem;
-//   }
-// }

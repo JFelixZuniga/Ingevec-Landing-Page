@@ -1,13 +1,12 @@
 .hero {
-  width: 100%;
+  // width: 100%;
   height: 40rem;
   background-color: lawngreen;
   margin-top: 5rem;
   position: relative;
   .hero-image {
-    width: inherit;
-    height: inherit;
-    background: url(../img/hero-image.png) center/cover no-repeat;
+    height: 100%;
+    background: url(../img/hero-image.png) center center/cover no-repeat;
   }
 
   .hero-text {
@@ -21,7 +20,23 @@
     font-weight: $bold;
     width: 34rem;
     height: 11.5rem;
-    text-align: center;
-    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet {
+      font-size: 1.5rem;
+      width: 28rem;
+      height: 8rem;
+      left: calc(50% - 14rem);
+      bottom: -40px;
+    }
+    @include telefono {
+      font-size: 1.2rem;
+      width: 22rem;
+      height: 8rem;
+      left: calc(50% - 11rem);
+      bottom: -40px;
+    }
   }
 }
