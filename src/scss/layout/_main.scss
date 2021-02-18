@@ -1,0 +1,48 @@
+main {
+  h2 {
+    font-size: 3.6rem;
+    font-weight: $bold;
+    color: $azul;
+    margin-top: 15rem;
+    margin-left: 10rem;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 8rem;
+      height: 3px;
+      background-color: $azul;
+      top: 2rem;
+      left: -10rem;
+    }
+  }
+  .text-start {
+    margin-top: $separacion;
+    p {
+      margin-top: 4rem;
+      font-size: 1.8rem;
+    }
+  }
+  .text-mid {
+    padding: 3rem 10rem;
+    p {
+      color: $azul;
+      font-size: 1.8rem;
+      position: relative;
+
+      &::before {
+        // display: inline-block;
+        position: absolute;
+        content: "";
+        width: 2rem;
+        height: 2rem;
+        left: -3rem;
+        background: url(../img/rigth-arrow.svg) center/cover no-repeat;
+        // vertical-align: text-bottom;
+      }
+    }
+  }
+  .text-end {
+    padding-bottom: 3rem;
+  }
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ingevec Landing Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Font awesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./build/css/app.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <div class="hamburger-menu">
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Inversionaistas</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Oportunidades</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Contacto</a>
+          </li>
+        </ul>
+
+        <div class="logo">
+          <img src="./build/img/logo.svg" alt="Logo Ingevec" />
+        </div>
+
+        <div class="nav">
+          <a href="#" class="project">Proyectos en Venta</a>
+          <a href="#">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-image"></div>
+      <div class="hero-text">
+        <h1>Denuncias</h1>
+      </div>
+    </section>
+
+    <main>
+      <div class="contenedor">
+        <h2>Canal de denuncias</h2>
+        <div class="text-start">
+          <p>Por favor realice su denuncia en el siguiente Formulario.</p>
+          <p>
+            Su denuncia será ANÓNIMA, sin embargo se recomienda especificar
+            alguna forma de contacto que permita a la administración,
+            resguardando su anonimato, contar con mayores antecedentes de la
+            parte denunciante.
+          </p>
+          <p>
+            Conforme a lo exigido por la Ley 20.393 que establece la
+            responsabilidad penal de las personas jurídicas en los delitos de
+            lavado de activos, financiamiento de terrorismo y cohecho, Ingevec
+            pone a disposición de sus trabajadores, clientes y del público en
+            general, los siguientes medios receptores de denuncias
+          </p>
+        </div>
+
+        <div class="text-mid">
+          <p><span></span>Correo electrónico a denuncias@ingevec.cl</p>
+          <p>
+            <span></span>Formulario de auditoría Anónimo en web (página actual)
+          </p>
+
+          <span></span>
+          <p>
+            Correo tradicional. Carta confidencial dirigida a Sub-Gerencia de
+            Recursos Humanos en calle Cerro el Plomo N°5.680, piso 14, Las
+            Condes, Santiago, Chile.
+          </p>
+        </div>
+
+        <div class="text-end">
+          <p>
+            Tales medios, tienen por objeto recibir información relevante
+            respecto a cualquier hecho o circunstancia que digan relación con
+            los delitos antes mencionados u otros, por lo cual solicitamos a
+            usted usarlos con responsabilidad y seriedad.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <section class="form">
+      <div>
+        <p class="text-center">
+          Posterior al envío del siguiente formulario web, usted será redirigido
+          al sitio inicial de Ingevec.
+        </p>
+      </div>
+      <form class="contact-form box-shadow-1">
+        <input
+          type="text"
+          name="name"
+          placeholder="Nombre"
+          title="Nombre sólo acepta letras y espacios en blanco"
+          pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Contacto"
+          title="Email incorrecto"
+          pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+          required
+        />
+        <textarea
+          name="comments"
+          cols="50"
+          rows="10"
+          placeholder="Mensaje"
+          required
+        ></textarea>
+        <div class="contact-form-loader">
+          <!-- <img src="./build/img/loader.svg" alt="Enviando..." /> -->
+        </div>
+        <input class="btn" type="submit" value="ENVIAR" />
+      </form>
+      <article id="envioMensaje" class="modal">
+        <div class="modal-content">
+          <article class="contact-form-response">
+            <h3>Mensaje enviado exitosamente</h3>
+          </article>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <div class="contenedor">
+        <div class="footer-cards">
+          <div class="card-item">
+            <h4>Conócenos</h4>
+            <!-- <p>INICIO</p> -->
+            <p><a href="#">INICIO</a></p>
+            <p><a href="#">PROYECTOS</a></p>
+            <p><a href="#">CONSTRUCTORA</a></p>
+            <p><a href="#">CONTACTO</a></p>
+          </div>
+
+          <div class="card-item">
+            <h4>Redes Sociales</h4>
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram-square"></i>
+            </a>
+          </div>
+
+          <div class="card-item">
+            <h4>centro de Negocios</h4>
+            <div class="info">
+              <div class="item-addres">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Avda. Portugal 412, Local 15, Stgo. Centro</p>
+              </div>
+              <div class="item-addres">
+                <i class="fas fa-envelope"></i>
+                <p>contactocomercial@ingevec.cl</p>
+              </div>
+              <div class="item-addres">
+                <i class="fas fa-phone-alt"></i>
+                <p>+56 2 33244290</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-item">
+            <h4>centro de Negocios</h4>
+            <div class="info">
+              <div class="item-addres">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Avda. Portugal 412, Local 15, Stgo. Centro</p>
+              </div>
+              <div class="item-addres">
+                <i class="fas fa-envelope"></i>
+                <p>contactocomercial@ingevec.cl</p>
+              </div>
+              <div class="item-addres">
+                <i class="fas fa-phone-alt"></i>
+                <p>+56 2 33244290</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="final">
+      <div class="contenedor">
+        <div class="elements">
+          <img src="./build/img/best-place.svg" alt="" />
+          <p>
+            Somos Best Place To Live. Todos los derechos reservados.
+            Ingevecinmobiliaria.cl. 2020
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./build/js/bundle.min.js"></script>
+  </body>
+</html>
