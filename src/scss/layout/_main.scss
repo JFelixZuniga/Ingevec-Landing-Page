@@ -65,7 +65,11 @@ main {
   }
   .text-end {
     padding-bottom: 3rem;
+    font-size: 1.8rem;
     line-height: 1.8;
-    padding: 0 2.5rem;
+    @include telefono {
+      font-size: 1.5rem;
+      padding: 0 2.5rem;
+    }
   }
 }
